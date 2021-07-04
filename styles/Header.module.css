@@ -1,21 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montez&display=swap');
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #fff;
-    color: #333;
+    background: #001247;
+    color: rgb(255, 255, 255);
     height: 60px;
     padding: 0 30px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0px 1px rgba(0, 0, 0, 0.1);
   }
   
   .header a {
-    color: #333;
+    color: #bfcfff;
     margin-right: 20px;
+    transition:ease-in-out .5s;
   }
   
   .header a:hover {
-    color: #000;
+    color: #ffffff;
   }
   .header ul {
     display: flex;
@@ -25,13 +28,20 @@
   }
   
   .logo {
-    color: red;
-    font-size: 20px;
-    text-transform: uppercase;
+    font-family: 'Montez', cursive;
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    /* text-transform: uppercase; */
   }
   
   .logo a {
-    color: red;
+    color: white;
+    transition:ease-in-out .5s;
+  }
+
+  .logo a:hover{
+    color: #bfcfff;
   }
   
   @media (max-width: 768px) {
