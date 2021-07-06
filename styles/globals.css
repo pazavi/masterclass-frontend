@@ -23,16 +23,19 @@ p {
 
 h1 {
   margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 300;
+  line-height: 2rem;
 }
 
 .btn {
   display: inline-block;
-  background: #000066;
+  background: #809fff;
   color: #fff;
   padding: 3px 20px;
   cursor: pointer;
   border: 0;
-  border-radius: 8px;
+  /* border-radius: 8px; */
 }
 
 .btn:hover {

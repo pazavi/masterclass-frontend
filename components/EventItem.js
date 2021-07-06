@@ -8,20 +8,20 @@ export default function EventItem({ evt }) {
       <div className={styles.img}>
         <Image
           src={evt.image ? evt.image : "/images/event-default.png"}
-          width={300}
-          height={177}
+          width={600}
+          height={354}
         />
       </div>
       <div className={styles.info}>
-        <span>
+        <span className={styles.date}>
           {evt.date} at {evt.time}
         </span>
         <h3>{evt.name}</h3>
-      </div>
-      <div className={styles.link}>
-        <Link href={`/events/${evt.slug}`}>
-          <a className="btn">Details</a>
-        </Link>
+        <div className={styles.link}>
+          <Link href={`/events/${evt.slug}`}>
+            <a className="btn">Details</a>
+          </Link>
+        </div>
       </div>
     </div>
   );
