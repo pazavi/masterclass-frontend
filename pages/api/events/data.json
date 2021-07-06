@@ -2,14 +2,14 @@
   "events": [
     {
       "id": "1",
-      "name": "Throwback Thursdays with DJ Manny Duke",
-      "slug": "throwback-thursdays-with-dj-manny-duke",
+      "name": "Disruptive Innovation in Finance: an Analytic Overview",
+      "slug": "disruptive-innovation-in-finance-an-analytic-overview",
       "venue": "Horizon Club",
       "address": "919 3rd Ave New York, New York(NY), 10022",
-      "performers": "DJ Manny Duke",
+      "performers": "David Gyori",
       "date": "June 09, 2021",
       "time": "10:00 PM EST",
-      "description": "Featuring deep cuts, party anthems and remixes nostalgic songs from two of the best decades of music with the very best music from the 90's and 2000's",
+      "description": "David Gyori, FinTech Top 50 Influencer & founding member of the World FinTech Association will be hosting a FREE event in our series of Masterclass FinTech Talks.",
       "image": "/images/sample/event1.jpg"
     },
     {
