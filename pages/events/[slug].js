@@ -1,4 +1,4 @@
-import { FaPencilAlt, FaTimes } from "react-icons/fa";
+import { FaArrowAltCircleLeft } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import Layout from "@/components/Layout";
@@ -41,7 +41,9 @@ export default function EventPage({ evt }) {
         <p>{evt.address}</p>
 
         <Link href="/events">
-          <a className={styles.back}>{"<"}Go Back</a>
+          <a className={styles.back}>
+            <FaArrowAltCircleLeft /> Go Back
+          </a>
         </Link>
       </div>
     </Layout>

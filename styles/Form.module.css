@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.form label {
+  display: block;
+  color: #818181;
+}
+
+.form input {
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  border: 0px;
+  font-family: "Roboto", sans-serif;
+  color: #001247;
+  font-size: 18px;
+  background-color: #bfcfff;
+  box-shadow: 0px 0px 2px -1px rgba(0, 0, 0, 1);
+  border-radius: 5px;
+  outline: none;
+}
+
+.form textarea {
+  width: 100%;
+  height: 150px;
+  padding: 5px;
+  border: 0px;
+  font-family: "Roboto", sans-serif;
+  color: #001247;
+  font-size: 18px;
+  background-color: #bfcfff;
+  box-shadow: 0px 0px 2px -1px rgba(0, 0, 0, 1);
+  border-radius: 5px;
+  outline: none;
+}
+
+.form input[type="submit"] {
+  display: block;
+  width: 100%;
+  margin: 20px 0 30px;
+  background-color: #001247;
+  color: white;
+}
+
+.form .file {
+  border: 1px #ccc solid;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

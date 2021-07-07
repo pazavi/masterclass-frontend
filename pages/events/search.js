@@ -1,4 +1,5 @@
 import qs from "qs";
+import { FaArrowAltCircleLeft } from "react-icons/fa";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Layout from "@/components/Layout";
@@ -12,8 +13,12 @@ export default function SerchPage({ events }) {
   return (
     <Layout title="Search Results">
       <Link href="/events">
-        <a> Go Back </a>
+        <a>
+          <FaArrowAltCircleLeft /> Go Back{" "}
+        </a>
       </Link>
+      <br />
+      <br />
       <h1>Search Results for {router.query.term}</h1>
       {events.length === 0 && <h3>No events to show</h3>}
 
