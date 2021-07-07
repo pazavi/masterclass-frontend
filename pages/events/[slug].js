@@ -14,13 +14,10 @@ export default function EventPage({ evt }) {
       <div className={styles.event}>
         <div className={styles.controls}>
           <Link href={`/events/edit/${evt.id}`}>
-            <a>
-              <FaPencilAlt /> Edit Event
-            </a>
+            <a className={styles.edit}> Edit Event</a>
           </Link>
           <a href="#" className={styles.delete} onClick={deleteEvent}>
-            {" "}
-            <FaTimes /> Delete Event{" "}
+            Delete Event{" "}
           </a>
         </div>
         <span>
@@ -32,7 +29,7 @@ export default function EventPage({ evt }) {
             <Image src={evt.image} width={960} height={600} />
           </div>
         )}
-        <h3>Lecturer:</h3>
+        <h3>Class Master:</h3>
         <p>{evt.performers}</p>
         <h3>Description:</h3>
         <p>{evt.description}</p>

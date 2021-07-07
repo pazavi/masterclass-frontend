@@ -1,66 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Norican&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Norican&display=swap");
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #001247;
-    color: rgb(255, 255, 255);
-    height: 60px;
-    padding: 0 30px;
-    box-shadow: 0 0px 1px rgba(0, 0, 0, 0.1);
-  }
-  
-  .header a {
-    color: #bfcfff;
-    margin-right: 20px;
-    transition:ease-in-out .5s;
-  }
-  
-  .header a:hover {
-    color: #ffffff;
-  }
-  .header ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-  }
-  
-  .logo {
-    font-family: 'Norican', cursive;
-    color: white;
-    font-size: 40px;
-    font-weight: 700;
-    /* text-transform: uppercase; */
-  }
-  
-  .logo a {
-    color: white;
-    transition:ease-in-out .5s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #001247;
+  color: rgb(255, 255, 255);
+  height: 60px;
+  padding: 0 30px;
+  box-shadow: 0 0px 1px rgba(0, 0, 0, 0.1);
+}
+
+.header a {
+  color: #bfcfff;
+  margin-right: 20px;
+  transition: ease-in-out 0.5s;
+}
+
+.header a:hover {
+  color: #ffffff;
+}
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.logo {
+  font-family: "Norican", cursive;
+  color: white;
+  font-size: 30px;
+  font-weight: 300;
+  /* margin-top: 12px; */
+  /* text-transform: uppercase; */
+}
+.logo span {
+  color: #bfcfff;
+}
+
+.logo a {
+  color: white;
+  transition: ease-in-out 0.5s;
+}
+
+.logo a:hover {
+  color: #bfcfff;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
   }
 
-  .logo a:hover{
-    color: #bfcfff;
+  .header ul {
+    margin: 20px 0;
+    flex-direction: column;
+    text-align: center;
   }
-  
-  @media (max-width: 768px) {
-    .header {
-      flex-direction: column;
-      height: auto;
-    }
-  
-    .header ul {
-      margin: 20px 0;
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .header a {
-      margin-right: 0;
-    }
-  
-    .logo {
-      margin: 20px 0;
-    }
+
+  .header a {
+    margin-right: 0;
   }
+
+  .logo {
+    margin: 20px 0;
+  }
+}

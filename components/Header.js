@@ -1,12 +1,18 @@
 import Link from "next/link";
 import styles from "@/styles/Header.module.css";
+import { FaBrain } from "react-icons/fa";
 
 export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
         <Link href="/">
-          <a>M</a>
+          <a>
+            Masterclass{" "}
+            <span>
+              <FaBrain size={30} />
+            </span>
+          </a>
         </Link>
       </div>
 
