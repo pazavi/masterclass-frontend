@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Search from "./Search";
 import styles from "@/styles/Header.module.css";
 import { FaBrain } from "react-icons/fa";
 
@@ -15,6 +16,7 @@ export default function Header() {
           </a>
         </Link>
       </div>
+      <Search />
 
       <nav>
         <ul>
