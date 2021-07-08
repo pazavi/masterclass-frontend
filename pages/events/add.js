@@ -13,7 +13,7 @@ import { FaArrowAltCircleLeft } from "react-icons/fa";
 export default function AddEventPage() {
   const [values, setValues] = useState({
     name: "",
-    performers: "",
+    performerss: "",
     venue: "",
     address: "",
     date: "",
@@ -22,6 +22,32 @@ export default function AddEventPage() {
   });
 
   const router = useRouter();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const hasEmptyFields = Object.values(values).some(
+      (element) => element === ""
+    );
+    if (hasEmptyFields) {
+      toast.error("Please fill in all fields");
+    }
+
+    const res = await fetch(`${API_URL}/events`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(values),
+    });
+
+    if (!res.ok) {
+      toast.error("Something Went Wrong");
+    } else {
+      const evt = await res.json();
+      router.push(`/events/${evt.slug}`);
+    }
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
