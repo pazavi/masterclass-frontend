@@ -50,11 +50,14 @@ export default function EventPage({ evt }) {
             />
           </div>
         )}
-        <h3>Class Master:</h3>
+        <h3>Class Master</h3>
         <p>{evt.performers}</p>
-        <h3>Description:</h3>
+        <h3>what's on</h3>
         <p>{evt.description}</p>
-        <h3>Venue: {evt.venue}</h3>
+        <h3>Venue </h3>
+        <p>
+          <strong>{evt.venue}</strong>
+        </p>
         <p>{evt.address}</p>
 
         <Link href="/events">
