@@ -2,8 +2,9 @@ import { useState } from "react";
 import { API_URL } from "@/config/index";
 import styles from "@/styles/Form.module.css";
 
-export default function ImageUpload({ evtId, imageUploaded, token }) {
+export default function ImageUpload({ evtId, imageUploaded }) {
   const [image, setImage] = useState(null);
+  const [uploading, setUploading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,6 +21,7 @@ export default function ImageUpload({ evtId, imageUploaded, token }) {
 
     if (res.ok) {
       imageUploaded();
+      setUploading(false);
     }
   };
 
@@ -34,8 +36,14 @@ export default function ImageUpload({ evtId, imageUploaded, token }) {
         <div className={styles.file}>
           <input type="file" onChange={handleFileChange} />
         </div>
-        <input type="submit" value="Upload" className="btn" />
+        <input
+          type="submit"
+          value="Upload"
+          className="btn"
+          onClick={() => setUploading(true)}
+        />
       </form>
+      {uploading && <div className={styles.loading}>LOADING.... </div>}
     </div>
   );
 }
