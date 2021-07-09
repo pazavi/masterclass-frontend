@@ -2,6 +2,7 @@ import Link from "next/link";
 import Layout from "@/components/Layout";
 import EventItem from "@/components/EventItem";
 import { API_URL } from "@/config/index";
+import { FaBrain } from "react-icons/fa";
 
 // import styles from '../styles/Home.module.css'
 
@@ -20,6 +21,27 @@ export default function HomePage({ events }) {
           <a className="btn-secondary">View All Events</a>
         </Link>
       )}
+
+      <div className="terms">
+        <h3>Terms & Privacy</h3>
+        <p>
+          <FaBrain /> {""} No data is being collected other than anonymized
+          usage statistics
+        </p>
+        <p>
+          <FaBrain />
+          {""} No data is being shared or sold to other parties
+        </p>
+        <p>
+          <FaBrain />
+          {""} This product is not liable for any damage that might be caused by
+          using it
+        </p>
+        <p>
+          <FaBrain /> {""}
+          <Link href="/about">About This Project</Link>
+        </p>
+      </div>
     </Layout>
   );
 }

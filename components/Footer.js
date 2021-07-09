@@ -16,9 +16,6 @@ export default function Footer() {
         &copy;
         {new Date().getFullYear()}&nbsp;| All Rights Reserved
       </p>
-      <p>
-        <Link href="/about">About This Project</Link>
-      </p>
     </footer>
   );
 }

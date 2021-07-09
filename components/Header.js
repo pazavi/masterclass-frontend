@@ -9,7 +9,7 @@ export default function Header() {
       <div className={styles.logo}>
         <Link href="/">
           <a>
-            Masterclass{" "}
+            TOK{" "}
             <span>
               <FaBrain size={30} />
             </span>
@@ -19,7 +19,7 @@ export default function Header() {
       <Search />
 
       <nav>
-        <ul>
+        <ul className={styles.navbar}>
           <li>
             <Link href="/events">
               <a>Events</a>

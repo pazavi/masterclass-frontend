@@ -67,3 +67,26 @@ h1 {
 .btn-icon svg {
   margin-right: 5px;
 }
+
+.terms {
+  padding: 30px;
+  border-top: 1px solid #5c5c5c;
+  border-bottom: 1px solid #5c5c5c;
+  /* border-radius: 8px; */
+  margin-top: 50px;
+  color: #5c5c5c;
+}
+
+.terms p {
+  font-size: 14px;
+  margin: 10px 0px;
+  padding: 0px;
+  line-height: 20px;
+}
+
+.terms h3 {
+  margin: 0px;
+  text-transform: uppercase;
+  font-weight: 300;
+  line-height: 2rem;
+}

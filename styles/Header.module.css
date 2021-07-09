@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Norican&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap");
 
 .header {
   display: flex;
@@ -28,24 +28,28 @@
 }
 
 .logo {
-  font-family: "Norican", cursive;
-  color: white;
-  font-size: 30px;
+  font-family: "Odibee Sans", cursive;
+  color: #bfcfff;
+  font-size: 40px;
   font-weight: 300;
-  /* margin-top: 12px; */
-  /* text-transform: uppercase; */
 }
 .logo span {
-  color: #bfcfff;
+  color: #475d43;
+  margin-left: -6px;
 }
 
 .logo a {
-  color: white;
+  color: #ffff;
+
   transition: ease-in-out 0.5s;
 }
 
 .logo a:hover {
   color: #bfcfff;
+}
+
+.navbar {
+  display: flex;
 }
 
 @media (max-width: 768px) {
@@ -66,5 +70,11 @@
 
   .logo {
     margin: 20px 0;
+  }
+
+  .navbar {
+    /* width: 350px; */
+    flex-direction: row !important;
+    justify-content: flex-end;
   }
 }

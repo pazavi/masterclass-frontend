@@ -1,5 +1,15 @@
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+} from "react-share";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
@@ -25,8 +35,10 @@ export default function EventPage({ evt }) {
       }
     }
   };
+  const BASE_URL = "http://172.0.0.1";
+
   return (
-    <Layout>
+    <Layout title={`Masterclass Event: ${evt.name}`}>
       <div className={styles.event}>
         <div className={styles.controls}>
           <Link href={`/events/edit/${evt.id}`}>
@@ -50,6 +62,53 @@ export default function EventPage({ evt }) {
             />
           </div>
         )}
+
+        <div style={{ marginBottom: "10px" }}>
+          <FacebookShareButton
+            url={`${BASE_URL}/events/${evt.slug}`}
+            qoute={`Free Masterclass: ${evt.name} `}
+            hashtag="#Masterclass"
+          >
+            <FacebookIcon
+              style={{ borderRadius: "50%", marginRight: "5px" }}
+              size={30}
+            />
+          </FacebookShareButton>
+
+          <TwitterShareButton
+            url={`${BASE_URL}/events/${evt.slug}`}
+            qoute={`Free Masterclass: ${evt.name} `}
+            hashtag="#Masterclass"
+          >
+            <TwitterIcon
+              style={{ borderRadius: "50%", marginRight: "5px" }}
+              size={30}
+            />
+          </TwitterShareButton>
+
+          <LinkedinShareButton
+            url={`${BASE_URL}/events/${evt.slug}`}
+            qoute={`Free Masterclass: ${evt.name} `}
+            hashtag="#Masterclass"
+          >
+            <LinkedinIcon
+              style={{ borderRadius: "50%", marginRight: "5px" }}
+              size={30}
+            />
+          </LinkedinShareButton>
+
+          <WhatsappShareButton
+            url={`${BASE_URL}/events/${evt.slug}`}
+            qoute={`Free Masterclass: ${evt.name} `}
+            hashtag="#Masterclass"
+          >
+            <WhatsappIcon
+              style={{ borderRadius: "50%", marginRight: "5px" }}
+              size={30}
+            />
+          </WhatsappShareButton>
+        </div>
+
         <h3>Class Master</h3>
         <p>{evt.performers}</p>
         <h3>what's on</h3>

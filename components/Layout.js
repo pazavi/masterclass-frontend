@@ -15,7 +15,7 @@ export default function Layout({ title, keywords, description, children }) {
         <meta name="keywords" content={keywords} />
       </Head>
       <Header />
-      {router.pathname === "/" &&<Showcase />} 
+      {router.pathname === "/" && <Showcase />}
       <div className={styles.container}>{children}</div>
       <Footer />
     </div>
@@ -23,7 +23,7 @@ export default function Layout({ title, keywords, description, children }) {
 }
 
 Layout.defaultProps = {
-  title: "Masterclass Events | Learn from the best",
+  title: "Free Masterclass Events | The tree of knowledge",
   description: "Find Top Masterclass and workshop Events",
   keywords:
     "masterclass, masterclasses, master-class, workshop, workshops, events",
