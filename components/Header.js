@@ -20,14 +20,19 @@ export default function Header() {
 
       <nav>
         <ul className={styles.navbar}>
-          <li>
+          <li className={styles.navlink}>
             <Link href="/events">
-              <a>Events</a>
+              <a> Events</a>
             </Link>
           </li>
-          <li>
+          <li className={styles.navlink}>
             <Link href="/events/add">
-              <a>Add Event</a>
+              <a> Add Event</a>
+            </Link>
+          </li>
+          <li className={styles.navlink}>
+            <Link href="/about">
+              <a> About</a>
             </Link>
           </li>
         </ul>

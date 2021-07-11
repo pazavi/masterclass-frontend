@@ -69,12 +69,14 @@
   }
 
   .logo {
-    margin: 20px 0;
+    margin: 12px 0 8px;
   }
 
   .navbar {
-    /* width: 350px; */
     flex-direction: row !important;
-    justify-content: flex-end;
+    justify-content: space-around !important;
+  }
+  .navlink {
+    margin-right: 10px !important;
   }
 }

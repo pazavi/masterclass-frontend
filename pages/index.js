@@ -21,6 +21,15 @@ export default function HomePage({ events }) {
           <a className="btn-secondary">View All Events</a>
         </Link>
       )}
+      <div className="about-home">
+        <h3>Giving is Receiving</h3>
+        <p>
+          Today’s world is full of people WANTING and GETTING and looking out
+          for self. It’s a dog eat dog world, they say. But what happens when
+          someone comes along giving and sharing knowledge freely?{" "}
+          <Link href="/about">Read more...</Link>
+        </p>
+      </div>
 
       <div className="terms">
         <h3>Terms & Privacy</h3>
@@ -36,10 +45,6 @@ export default function HomePage({ events }) {
           <FaBrain />
           {""} This product is not liable for any damage that might be caused by
           using it
-        </p>
-        <p>
-          <FaBrain /> {""}
-          <Link href="/about">About This Project</Link>
         </p>
       </div>
     </Layout>
