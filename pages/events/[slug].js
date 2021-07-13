@@ -101,9 +101,7 @@ export default function EventPage({ evt }) {
             <p>{evt.address}</p>
           </div>
 
-          <div className={styles.map}>
-            <EventMap evt={evt} />
-          </div>
+          <div className={styles.map}>{/* <EventMap evt={evt} /> */}</div>
         </div>
 
         <Link href="/events">
