@@ -92,7 +92,7 @@ export default function EventPage({ evt }) {
           <div className={styles.info}>
             <h3>Class Master</h3>
             <p>{evt.performers}</p>
-            <h3>what's on</h3>
+            <h3>what is on</h3>
             <p>{evt.description}</p>
             <h3>Venue </h3>
             <p>

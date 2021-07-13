@@ -49,7 +49,7 @@ export default function AboutPage() {
       <p>What do you know that could help your audience?</p>
 
       <p>
-        Why not package up that expertise and create an 'offline' masterclass
+        Why not package up that expertise and create an offline masterclass
         event with it and release some of that knowledge for free?
       </p>
 
