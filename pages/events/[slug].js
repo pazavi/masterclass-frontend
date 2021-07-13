@@ -14,7 +14,8 @@ import { FaArrowAltCircleLeft } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import Layout from "@/components/Layout";
-import { API_URL } from "@/config/index";
+import EventMap from "@/components/EventMap";
+import { API_URL, NEXT_URL } from "@/config/index";
 import styles from "@/styles/Event.module.css";
 import { useRouter } from "next/router";
 
@@ -43,7 +44,7 @@ export default function EventPage({ evt }) {
 
         <div style={{ marginBottom: "10px" }}>
           <FacebookShareButton
-            url={`${BASE_URL}/events/${evt.slug}`}
+            url={`${NEXT_URL}/events/${evt.slug}`}
             qoute={`Free Masterclass: ${evt.name} `}
             hashtag="#Masterclass"
           >
@@ -54,7 +55,7 @@ export default function EventPage({ evt }) {
           </FacebookShareButton>
 
           <TwitterShareButton
-            url={`${BASE_URL}/events/${evt.slug}`}
+            url={`${NEXT_URL}/events/${evt.slug}`}
             qoute={`Free Masterclass: ${evt.name} `}
             hashtag="#Masterclass"
           >
@@ -65,7 +66,7 @@ export default function EventPage({ evt }) {
           </TwitterShareButton>
 
           <LinkedinShareButton
-            url={`${BASE_URL}/events/${evt.slug}`}
+            url={`${NEXT_URL}/events/${evt.slug}`}
             qoute={`Free Masterclass: ${evt.name} `}
             hashtag="#Masterclass"
           >
@@ -76,7 +77,7 @@ export default function EventPage({ evt }) {
           </LinkedinShareButton>
 
           <WhatsappShareButton
-            url={`${BASE_URL}/events/${evt.slug}`}
+            url={`${NEXT_URL}/events/${evt.slug}`}
             qoute={`Free Masterclass: ${evt.name} `}
             hashtag="#Masterclass"
           >
@@ -87,15 +88,23 @@ export default function EventPage({ evt }) {
           </WhatsappShareButton>
         </div>
 
-        <h3>Class Master</h3>
-        <p>{evt.performers}</p>
-        <h3>what's on</h3>
-        <p>{evt.description}</p>
-        <h3>Venue </h3>
-        <p>
-          <strong>{evt.venue}</strong>
-        </p>
-        <p>{evt.address}</p>
+        <div className={styles.details}>
+          <div className={styles.info}>
+            <h3>Class Master</h3>
+            <p>{evt.performers}</p>
+            <h3>what's on</h3>
+            <p>{evt.description}</p>
+            <h3>Venue </h3>
+            <p>
+              <strong>{evt.venue}</strong>
+            </p>
+            <p>{evt.address}</p>
+          </div>
+
+          <div className={styles.map}>
+            <EventMap evt={evt} />
+          </div>
+        </div>
 
         <Link href="/events">
           <a className={styles.back}>
